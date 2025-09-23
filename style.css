@@ -1,9 +1,9 @@
 html  {
 --text: #1d3029;
 --background: #95c181;
---primary: #84c181;
---secondary: #b9df77;
---accent: #d3c292;
+--primary: #374736;
+--secondary: #555a4b;
+--accent: #bcc475;
 
 }   
 
@@ -13,8 +13,13 @@ body {
 }
 h1,
 h2,
-h3, {
+h3 {
     color: var(--primary);
+    font-size:25px;
+    font-weight:500;
+    font-style: italic;
+    font-family: "Ubuntu";
+    text-decoration: overline underline
 }
 
 p {
