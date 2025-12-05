@@ -6,6 +6,7 @@ let count = 0;
 let clickcount = 1;
 let clickmultiplier = 1;
 
+
 function increment() {
   count = count + clickcount * clickmultiplier;
   countEl.innerText = count;
@@ -13,15 +14,22 @@ function increment() {
 kiwibtn.addEventListener("click", increment1)
 
 function increment2() {
-  clickcount = 2;
+  clickcount += 1;
   count = count - 10;
   countEl.innerText = count;
 }
 kiwibtn.addEventListener("click", increment2)
 
 function increment3() {
-  clickmultiplier = 2;
+  clickmultiplier += 2;
   count = count - 50;
   countEl.innerText = count;
 }
 kiwibtn.addEventListener("click", increment3)
+
+function increment4() {
+  clickmultiplier += 5;
+  count = count - 1000;
+  countEl.innerText = count;
+}    
+kiwibtn.addEventListener("click", increment4)
