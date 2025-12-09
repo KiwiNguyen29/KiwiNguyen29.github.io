@@ -28,7 +28,7 @@ function increment3() {
   if (count > 49) {
     count = count - 50;
     countEl.innerText = count;
-    clickmultiplier += 2;
+    clickmultiplier *= 2;
   }
 
 }
@@ -36,7 +36,7 @@ kiwibtn.addEventListener("click", increment3)
 
 function increment4() {
   if (count > 999) {
-    clickmultiplier += 5;
+    clickmultiplier *= 5;
     count = count - 1000;
     countEl.innerText = count;
   }
@@ -56,7 +56,7 @@ function increment5() {
 kiwibtn.addEventListener("click", increment5)
 function increment6() {
   if (count > 99999) {
-    clickmultiplier += 10;
+    clickmultiplier *= 10;
     count = count - 100000;
     countEl.innerText = count;
   }
@@ -65,7 +65,7 @@ function increment6() {
 kiwibtn.addEventListener("click", increment6)
 function increment7() {
   if (count > 999999) {
-    clickmultiplier += 100;
+    clickmultiplier *= 100;
     count = count - 1000000;
     countEl.innerText = count;
   }
@@ -74,7 +74,7 @@ function increment7() {
 kiwibtn.addEventListener("click", increment7)
 function increment8() {
   if (count > 99999999) {
-    clickmultiplier += 1000;
+    clickmultiplier *= 1000;
     count = count - 100000000;
     countEl.innerText = count;
   }
