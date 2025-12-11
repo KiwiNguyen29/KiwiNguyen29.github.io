@@ -90,3 +90,21 @@ function increment9() {
  
 }
 kiwibtn.addEventListener("click", increment9)
+function increment10() {
+  if (count > 9999999999) {
+    clickcount *= 10000;
+    count = count - 10000000000;
+    countEl.innerText = count;
+  }
+ 
+}
+kiwibtn.addEventListener("click", increment10)
+function increment11() {
+  if (count > 99999999999) {
+    clickcount += 100000;
+    count = count - 100000000000;
+    countEl.innerText = count;
+  }
+ 
+}
+kiwibtn.addEventListener("click", increment11)
