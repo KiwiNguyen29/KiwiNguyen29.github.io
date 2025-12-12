@@ -1,9 +1,9 @@
 html  {
---text: #83cdff;
+--text: #000000;
 --background: #ffffff
 --primary: #374736;
 --secondary: #555a4b;
---accent: #bcc475;
+--accent: #a5c99c;
 }
 
 
@@ -47,5 +47,40 @@ audio {
 }
 
 button {
-    background-color: rgba(31, 255, 24, 0.342);
+    margin: 0.5rem;
+}
+
+.btn {
+    background-color: var(--accent);
+    color: #000000fd;
+    padding: 0.75em 2em;
+    border: none;
+    outline: none;
+    position:relative;
+    cursor: pointer;
+
+    --background-color: #455739e3;
+    --border-size: 5px;
+
+   
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--accent);
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+    transition: top, left, right, bottom, 100ms ease-in-out;
+
+}
+.btn:hover::before,
+.btn:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
 }

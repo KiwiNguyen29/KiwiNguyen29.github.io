@@ -6,12 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Input Element Challenge</title>
     <style>
-        body {
+         body {
             font-family: sans-serif;
             max-width: 600px;
             margin: 2rem auto;
         }
+button {
+    margin: 0.5rem;
+}
 
+.btn {
+    background-color: var(--accent);
+    color: #000000fd;
+    padding: 0.75em 2em;
+    border: none;
+    outline: none;
+    position:relative;
+    cursor: pointer;
+
+    --background-color: #a2a2a1e3;
+    --border-size: 4px;
+
+   
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color:var(--accent);
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+    transition: top, left, right, bottom, 100ms ease-in-out;
+
+}
+.btn:hover::before,
+.btn:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+}
         section {
             margin-bottom: 1.5rem;
         }
@@ -21,9 +58,6 @@
             margin-top: 0.5rem;
         }
 
-        button {
-            margin-top: 1rem;
-        }
 
         .output {
             margin-top: 1rem;
@@ -72,7 +106,7 @@
         <button id="btnSubmit">Submit</button>
         <div class="output" id="modeOutput"></div>
     </section>
-<button><a href="index.html">return to home page</a></button>
+<button class="btn"><a href="index.html">return to home page</a></button>
     <script>
         // --- PART 1 ---
         const nameInput = document.getElementById("nameInput");

@@ -1,0 +1,8 @@
+{
+  "name": "kiwi-clicker-test",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "jsdom": "^22.1.0"
+  }
+}
