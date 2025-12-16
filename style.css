@@ -1,11 +1,12 @@
-html  {
---text: #1d3029;
---background: #95c181;
---primary: #374736;
---secondary: #555a4b;
---accent: #deffc5;
+html {
+    --text: #1d3029;
+    --background: #95c181;
+    --primary: #374736;
+    --secondary: #555a4b;
+    --accent: #deffc5;
 
-}   
+}
+
 h2 {
     border: 1px solid rgb(0, 73, 10);
     padding-top: 5px;
@@ -13,6 +14,7 @@ h2 {
     padding-right: 10px;
     padding-bottom: 5px;
 }
+
 p {
     border: 2px solid rgb(73, 160, 85);
     padding-top: 9px;
@@ -23,33 +25,53 @@ p {
 
 
 body {
-    display:flex;
+    display: flex;
     justify-content: left;
     align-items: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-   margin: 0;
+    margin: 0;
     color: var(--text);
     background: var(--background)
 }
-button {
-    margin: 0.5rem;
-}
 
 .btn {
+    margin: 0.5rem;
     background-color: var(--accent);
     color: #000000fd;
     padding: 0.75em 2em;
     border: none;
     outline: none;
-    position:relative;
+    position: relative;
     cursor: pointer;
 
     --background-color: #567244e3;
     --border-size: 4px;
+    letter-spacing: initial;
+    word-spacing: initial;
+    line-height: initial;
+    text-transform: initial;
+    text-indent: initial;
+    text-shadow: initial;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    align-items: flex-start;
+    text-align: start;
+    cursor: default;
+    box-sizing: border-box;
+    padding: 2px 6px 3px 6px;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0;
+    text-shadow: none;
+    display: inline-block;
 
-   
 }
+
 .btn::before {
     content: '';
     position: absolute;
@@ -57,12 +79,13 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color:var(--accent);
+    background-color: var(--accent);
     z-index: -1;
     border: var(--border-size) solid var(--background-color);
     transition: top, left, right, bottom, 100ms ease-in-out;
 
 }
+
 .btn:hover::before,
 .btn:focus::before {
     top: calc(var(--border-size) * -2);
@@ -70,25 +93,28 @@ button {
     right: calc(var(--border-size) * -2);
     bottom: calc(var(--border-size) * -2);
 }
-h1, {
-    color: var(--primary);
-    font-size:25px;
-    font-weight:500;
-    font-style: italic;
+
+h1,
+{
+color: var(--primary);
+font-size: 25px;
+font-weight: 500;
+font-style: italic;
 }
 
-h2, {
-    color: var(--primary);
-    font-size:25px;
-    font-weight:500;
-    font-style: italic;
-    font-family: "Ubuntu";
+h2,
+{
+color: var(--primary);
+font-size: 25px;
+font-weight: 500;
+font-style: italic;
+font-family: "Ubuntu";
 }
 
 h3 {
     color: var(--primary);
-    font-size:25px;
-    font-weight:500;
+    font-size: 25px;
+    font-weight: 500;
     font-style: italic;
     font-family: "Ubuntu";
 }
@@ -112,4 +138,3 @@ img {
 audio {
     background: var(--secondary);
 }
-  
